@@ -27,7 +27,7 @@ def predict_recent_data():
 st.title("Mood Prediction App")
 
 # Button to trigger prediction
-if st.button("Predict Mood for Recent Data"):
+if st.button("Predict My Mood"):
     anxiety_level, stress_level = predict_recent_data()
-    st.write("Anxiety Level:", anxiety_level)
-    st.write("Stress Level:", stress_level)
+    st.write("Your Anxiety Level:", anxiety_level)
+    st.write("Your Stress Level:", stress_level)
