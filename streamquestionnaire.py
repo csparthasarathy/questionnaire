@@ -29,12 +29,6 @@ client = MongoClient("mongodb+srv://moodtrackr:moodtrackr1@moodtrackr.hwwdhdl.mo
 db = client['test']
 collection = db["modelpredictions"]
 
-def navigate_to_home():
-    st.markdown("[Home](https://www.google.com/)", unsafe_allow_html=True)
-
-# Display the home button
-navigate_to_home()
-
 def predict_recent_data():
     recent_data = collection.find().sort([('_id', DESCENDING)]).limit(1)
     
