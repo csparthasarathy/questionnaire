@@ -4,6 +4,25 @@ import numpy as np
 from pymongo import MongoClient
 from pymongo import DESCENDING
 
+home_button_style = """
+    background-color: #f63366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+"""
+def navigate_to_home():
+   
+    home_url = "https://serenemindz-home.onrender.com/"
+    st.markdown('<a href="{}" style="{}" target="_blank">Home</a>'.format(home_url, home_button_style), unsafe_allow_html=True)
+
+navigate_to_home()
+
 modelp = joblib.load("qmodel.pkl")
 
 client = MongoClient("mongodb+srv://moodtrackr:moodtrackr1@moodtrackr.hwwdhdl.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp")
