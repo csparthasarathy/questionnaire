@@ -34,8 +34,6 @@ def navigate_to_home():
 
 navigate_to_home()
 
-st.write(" UserName : ",user)
-
 def predict_recent_data():
     recent_data = collection.find().sort([('_id', DESCENDING)]).limit(1)
     
